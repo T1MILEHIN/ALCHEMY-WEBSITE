@@ -47,10 +47,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const navigation = useNavigation();
-  const isLoading = navigation.state !== "idle";
+  const isNavigating = Boolean(navigation.location);
   return <>
     <Navbar />
-    {isLoading && <Loader />}
+    {isNavigating && <Loader />}
     <Outlet />
     <Footer />
   </>;
