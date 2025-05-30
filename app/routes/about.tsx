@@ -88,9 +88,9 @@ const about = () => {
                                     </div>
 
                                     {/* Connecting Line */}
-                                    {index < learningPath.length - 1 && (
+                                    {/* {index < learningPath.length - 1 && (
                                         <div className="absolute left-6 mt-12 w-0.5 h-6 bg-gray-300"></div>
-                                    )}
+                                    )} */}
                                 </div>
                             ))}
                         </div>
