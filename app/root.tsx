@@ -5,7 +5,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation
 } from "react-router";
+import Loader from "./components/loader";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -19,7 +23,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@100..900&display=swap",
   },
 ];
 
@@ -42,7 +46,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const navigation = useNavigation();
+  const isLoading = navigation.state !== "idle";
+  return <>
+    <Navbar />
+    {isLoading && <Loader />}
+    <Outlet />
+    <Footer />
+  </>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
