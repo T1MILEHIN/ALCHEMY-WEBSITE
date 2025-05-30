@@ -4,8 +4,8 @@ import { TrainingHub } from "~/components/trainingHub";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Home Page" },
+    { name: "description", content: "Welcome!" },
   ];
 }
 
