@@ -64,7 +64,7 @@ const navbar = () => {
 
                     {/* Desktop Login Button */}
                     <div className="hidden lg:flex items-center">
-                        <Link to="/login">
+                        <Link to="/auth/login">
                             <Button
                                 variant="outline"
                                 className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200 shadow-sm hover:shadow-md"
@@ -127,14 +127,16 @@ const navbar = () => {
                                     })}
 
                                     <div className="pt-4 mt-6 border-t border-emerald-100">
-                                        <Button
-                                            variant="outline"
-                                            className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50 justify-start"
-                                            onClick={() => setIsMobileMenuOpen(false)}
-                                        >
-                                            <User size={18} className="mr-2" />
-                                            Log In
-                                        </Button>
+                                        <Link to="/auth/login">
+                                            <Button
+                                                variant="outline"
+                                                className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50 justify-start"
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                            >
+                                                <User size={18} className="mr-2" />
+                                                Log In
+                                            </Button>
+                                        </Link>
                                     </div>
                                 </div>
                             </SheetContent>

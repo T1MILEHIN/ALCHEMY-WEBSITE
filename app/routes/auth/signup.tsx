@@ -5,6 +5,14 @@ import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
+import type { Route } from './+types/signup';
+
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "SignUp Page" },
+    { name: "description", content: "Welcome to our Website\nTo continue Register with your details" },
+  ];
+}
 
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -162,7 +170,7 @@ const Signup = () => {
                         <div className="mt-6 text-center">
                             <p className="text-gray-600">
                                 Already have an account?{' '}
-                                <Link to="/login" className="text-emerald-600 hover:text-emerald-700 font-medium">
+                                <Link to="/auth/login" className="text-emerald-600 hover:text-emerald-700 font-medium">
                                     Sign in
                                 </Link>
                             </p>

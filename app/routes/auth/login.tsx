@@ -5,6 +5,14 @@ import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
+import type { Route } from './+types/login';
+
+export function meta({ }: Route.MetaArgs) {
+  return [
+    { title: "Login Page" },
+    { name: "description", content: "Enter Your Login Details to continue" },
+  ];
+}
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -84,7 +92,7 @@ const Login = () => {
                                     <input type="checkbox" className="rounded border-emerald-300 text-emerald-600 focus:ring-emerald-500" />
                                     <span>Remember me</span>
                                 </label>
-                                <Link to="/forgot-password" className="text-sm text-emerald-600 hover:text-emerald-700 font-medium">
+                                <Link to="/auth/forgot-password" className="text-sm text-emerald-600 hover:text-emerald-700 font-medium">
                                     Forgot password?
                                 </Link>
                             </div>
@@ -100,7 +108,7 @@ const Login = () => {
                         <div className="mt-6 text-center">
                             <p className="text-gray-600">
                                 Don't have an account?{' '}
-                                <Link to="/signup" className="text-emerald-600 hover:text-emerald-700 font-medium">
+                                <Link to="/auth/signup" className="text-emerald-600 hover:text-emerald-700 font-medium">
                                     Sign up
                                 </Link>
                             </p>
