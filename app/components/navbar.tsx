@@ -64,13 +64,15 @@ const navbar = () => {
 
                     {/* Desktop Login Button */}
                     <div className="hidden lg:flex items-center">
-                        <Button
-                            variant="outline"
-                            className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200 shadow-sm hover:shadow-md"
-                        >
-                            <User size={18} className="mr-2" />
-                            Log In
-                        </Button>
+                        <Link to="/login">
+                            <Button
+                                variant="outline"
+                                className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-200 shadow-sm hover:shadow-md"
+                            >
+                                <User size={18} className="mr-2" />
+                                Log In
+                            </Button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu */}

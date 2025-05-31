@@ -18,7 +18,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
   return (
     <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105">
       {/* Gradient Header */}
-      <div className={`h-32 bg-gradient-to-r ${course.color} relative`}>
+      <div className={`h-32 bg-gradient-to-r ${course.color} relative `}>
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute top-4 right-4">
           <span className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -45,7 +45,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
         <h4 className="text-lg font-semibold text-emerald-600 mb-3">
           {course.subtitle}
         </h4>
-        <p className="text-gray-600 mb-4 leading-relaxed">
+        <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
           {course.description}
         </p>
         
