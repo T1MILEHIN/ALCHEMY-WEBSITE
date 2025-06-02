@@ -47,7 +47,7 @@ const ForgotPassword = () => {
                 >
                   Try Another Email
                 </Button>
-                <Link to="/login">
+                <Link to="/auth/login">
                   <Button 
                     variant="ghost" 
                     className="w-full text-gray-600 hover:text-emerald-600 animate-fade-in"
@@ -115,7 +115,7 @@ const ForgotPassword = () => {
             </form>
 
             <div className="mt-6 text-center animate-fade-in" style={{ animationDelay: '0.7s' }}>
-              <Link to="/login" className="inline-flex items-center text-gray-600 hover:text-emerald-600 transition-all duration-200 hover:underline">
+              <Link to="/auth/login" className="inline-flex items-center text-gray-600 hover:text-emerald-600 transition-all duration-200 hover:underline">
                 <ArrowLeft size={18} className="mr-2" />
                 Back to Sign In
               </Link>

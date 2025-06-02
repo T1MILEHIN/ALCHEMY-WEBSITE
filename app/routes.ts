@@ -8,7 +8,7 @@ export default [
     ...prefix("auth", [
         route("signup", "routes/auth/signup.tsx"),
         route("login", "routes/auth/login.tsx"),
-        route("forgotPassword", "routes/auth/forgotPassword.tsx"),
+        route("forgot-password", "routes/auth/forgotPassword.tsx"),
     ]),
 
 
