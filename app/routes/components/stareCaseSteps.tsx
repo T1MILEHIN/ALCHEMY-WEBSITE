@@ -34,18 +34,18 @@ const StaircaseStep = ({ step, index, totalSteps }: StaircaseStepProps) => {
                 ${step.current ? 'ring-4 ring-red-300 ring-opacity-50' : ''}`}>
                 <div className="flex items-center space-x-3">
                     {/* Icon */}
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${step.completed
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center ${step.completed
                         ? 'bg-white/20'
                         : step.current
                             ? 'bg-white/20'
                             : 'bg-white/10'
                         }`}>
                         {step.completed ? (
-                            <CheckCircle size={16} />
+                            <CheckCircle size={10} />
                         ) : step.current ? (
-                            <Target size={16} />
+                            <Target size={10} />
                         ) : (
-                            <Circle size={16} />
+                            <Circle size={10} />
                         )}
                     </div>
                     {/* Step Info */}
