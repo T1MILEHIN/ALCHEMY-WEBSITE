@@ -25,16 +25,6 @@ export const CourseCard = ({ course }: CourseCardProps) => {
             {course.level}
           </span>
         </div>
-        <div className="absolute bottom-4 left-4">
-          <div className="flex items-center space-x-1 text-white">
-            <Star size={16} fill="currentColor" />
-            <Star size={16} fill="currentColor" />
-            <Star size={16} fill="currentColor" />
-            <Star size={16} fill="currentColor" />
-            <Star size={16} fill="currentColor" />
-            <span className="ml-2 text-sm">5.0</span>
-          </div>
-        </div>
       </div>
 
       {/* Content */}
