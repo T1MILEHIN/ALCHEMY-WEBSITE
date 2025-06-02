@@ -49,8 +49,7 @@ export default function App() {
   const isNavigating = Boolean(navigation.location);
   return (
     <>
-      {isNavigating && <Loader />}
-      <Outlet />
+      {isNavigating ? <Loader /> : <Outlet />}
     </>
   )
 }
