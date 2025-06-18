@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import { CourseCard } from "~/components/courseCard";
 // import { TrainingHub } from "~/components/trainingHub";
 import ChineseHut from "~/components/chineseHut";
+import { AuroraBackground } from "~/components/ui/aurora-background";
 export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Home Page" },
@@ -44,20 +45,24 @@ const courses = [
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-12">
+    <main className="mx-auto px-4 pb-12">
       {/* Hero Section */}
-      <div className="text-center mb-16 animate-fade-in">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Your Journey on the
-        </h1>
-        <h2 className="text-4xl md:text-5xl font-bold mb-8">
-          {/* bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent */}
-          Alchemist Path
-        </h2>
-        <p className="jost text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Step by Step Path for you to go from Finacial Pain to Financial Gain, Which includes personal development and Spiritual awareness
-        </p>
+      <AuroraBackground>
+      <div className="min-h-screen grid place-content-center">
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 lg:mb-6 text-black">
+            Your Journey on the
+          </h1>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 lg:mb-8 bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent">
+            {/* bg-gradient-to-r from-emerald-700 to-teal-700 bg-clip-text text-transparent */}
+            Alchemist Path
+          </h2>
+          <p className="jost text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Step by Step Path for you to go from Finacial Pain to Financial Gain, Which includes personal development and Spiritual awareness
+          </p>
+        </div>
       </div>
+      </AuroraBackground>
 
       {/* Course Cards Section */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

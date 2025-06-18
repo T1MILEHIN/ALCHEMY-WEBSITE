@@ -1,9 +1,8 @@
 import type { Route } from "./+types/level";
-import { CheckCircle, Circle, Target } from 'lucide-react';
-import { Button } from '~/components/ui/button';
 import StaircaseStep from "./components/stareCaseSteps";
 import ProgressCard from "./components/progressCard";
 import ModulesSection from "./components/modulesSection";
+import { AuroraBackground } from "~/components/ui/aurora-background";
 
 export function meta({ }: Route.MetaArgs) {
     return [
@@ -38,18 +37,22 @@ const level = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-teal-50">
-            <main className="container mx-auto px-4 py-12">
+            <main className="mx-auto pb-12">
                 {/* Page Header */}
-                <div className="text-center mb-16">
-                    <h1 className="text-6xl font-bold mb-6">
-                        WHERE ARE YOU?
-                    </h1>
-                    <p className="jost text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Track your progress on the Alchemist Path and discover your current position in the journey of transformation from base metals to gold.
-                    </p>
-                </div>
+                <AuroraBackground>
+                    <div className="min-h-screen flex items-center justify-center">
+                        <div className="text-center mb-16">
+                            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+                                WHERE ARE YOU?
+                            </h1>
+                            <p className="jost text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                                Track your progress on the Alchemist Path and discover your current position in the journey of transformation from base metals to gold.
+                            </p>
+                        </div>
+                    </div>
+                </AuroraBackground>
 
-                <div className="gri lg:grid-cols-3 gap-8 space-y-6">
+                <div className="container mx-auto px-4 space-y-6">
                     <div className="lg:col-span-2">
                         <div className="overflow-hidden bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 min-h-[600px]">
                             <h2 className="inter text-2xl font-bold mb-8 text-gray-800 text-center">

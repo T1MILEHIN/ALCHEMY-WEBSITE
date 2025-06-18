@@ -28,7 +28,7 @@ const Login = () => {
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-teal-50 flex items-center justify-center p-4">
             <div className="w-full max-w-md">
                 {/* Logo */}
-                <div className="text-center mb-8">
+                <div className="text-center mb-4">
                     <Link to="/" className="inline-flex items-center space-x-3 group">
                         <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-emerald-200 transition-all duration-300 group-hover:scale-105">
                             <span className="text-white font-bold text-xl">A</span>
@@ -42,7 +42,7 @@ const Login = () => {
                 <Card className="bg-white/80 backdrop-blur-lg border-emerald-100 shadow-xl">
                     <CardHeader className="text-center">
                         <CardTitle className="text-2xl font-bold text-gray-800">Welcome Back</CardTitle>
-                        <CardDescription className="text-gray-600">
+                        <CardDescription className="text-gray-600 jost">
                             Sign in to your account to continue your journey
                         </CardDescription>
                     </CardHeader>
@@ -106,9 +106,9 @@ const Login = () => {
                         </form>
 
                         <div className="mt-6 text-center">
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 jost">
                                 Don't have an account?{' '}
-                                <Link to="/auth/signup" className="text-emerald-600 hover:text-emerald-700 font-medium">
+                                <Link to="/auth/signup" className="text-emerald-600 hover:text-emerald-700 font-medium jost">
                                     Sign up
                                 </Link>
                             </p>

@@ -22,7 +22,7 @@ const navbar = () => {
     ];
 
     return (
-        <header className="bg-white/95 backdrop-blur-lg border-b  sticky top-0 z-50">
+        <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
             <div className="container mx-auto px-4 py-3">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -43,7 +43,7 @@ const navbar = () => {
                                 <NavLink
                                     key={item.href}
                                     to={item.href}
-                                    className={({isActive})=> isActive ? "flex items-center space-x-2 px-4 py-2 rounded-lg text-emerald-600 bg-emerald-50/50 transition-all duration-200 font-medium group" : "flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200 font-medium group"}
+                                    className={({isActive})=> isActive ? "flex items-center space-x-2 px-4 py-2 rounded-lg text-emerald-600 bg-emerald-50/50 transition-all duration-200 font-medium group" : "flex items-center space-x-2 px-4 py-2 rounded-lg text-black hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200 font-medium group"}
                                     // className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200 font-medium group"
                                 >
                                     {Icon && <Icon size={18} className="group-hover:scale-110 transition-transform duration-200" />}
@@ -53,7 +53,7 @@ const navbar = () => {
                                 <a
                                     key={item.href}
                                     href={item.href}
-                                    className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200 font-medium group"
+                                    className="flex items-center space-x-2 px-4 py-2 rounded-lg text-black hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200 font-medium group"
                                 >
                                     {Icon && <Icon size={18} className="group-hover:scale-110 transition-transform duration-200" />}
                                     <span>{item.label}</span>

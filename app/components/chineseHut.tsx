@@ -9,7 +9,7 @@ const ChineseHut = () => {
                 <div className="relative">
                     {/* Top roof layer */}
                     <div
-                        className="w-96 h-32 mx-auto relative"
+                        className="lg:w-96 w-56 h-32 mx-auto relative"
                         style={{
                             background: 'linear-gradient(145deg, #059669, #047857)',
                             clipPath: 'polygon(10% 100%, 50% 20%, 90% 100%)',
@@ -27,7 +27,7 @@ const ChineseHut = () => {
                     </div>
 
                     {/* Roof eaves curve */}
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 lg:w-[500px] h-8">
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 lg:w-[500px] w-[80%] h-8">
                         <div
                             className="w-full h-full"
                             style={{
@@ -41,7 +41,7 @@ const ChineseHut = () => {
                 {/* Main body of the hut */}
                 <div className="relative mt-4">
                     <div
-                        className="w-96 h-80 mx-auto relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-amber-50 border-4 border-green-700 rounded-lg shadow-2xl"
+                        className="lg:w-96 w-[90%] h-80 mx-auto relative bg-gradient-to-br from-yellow-100 via-yellow-50 to-amber-50 border-4 border-green-700 rounded-lg shadow-2xl"
                         style={{
                             background: 'linear-gradient(145deg, #fef3c7, #fde68a, #f59e0b)',
                         }}
@@ -53,17 +53,17 @@ const ChineseHut = () => {
                         <div className="p-8 h-full flex flex-col justify-between text-center">
                             {/* Top section */}
                             <div className="hover:scale-105 cursor-pointer duration-200 bg-white backdrop-blur-sm rounded-lg p-4 border border-green-200 shadow-sm">
-                                <h3 className="text-green-800 font-semibold text-lg mb-2 uppercase jost">Spiritual Awareness</h3>
+                                <h3 className="text-green-800 font-semibold text-base lg:text-lg uppercase jost">Spiritual Awareness</h3>
                             </div>
 
                             {/* Middle section */}
                             <div className="hover:scale-105 cursor-pointer duration-200 bg-white backdrop-blur-sm rounded-lg p-4 border border-green-200 shadow-sm">
-                                <h3 className="text-green-800 font-semibold text-lg mb-2 uppercase jost">Personal Development</h3>
+                                <h3 className="text-green-800 font-semibold text-base lg:text-lg uppercase jost">Personal Development</h3>
                             </div>
 
                             {/* Bottom section */}
                             <div className="hover:scale-105 cursor-pointer duration-200 bg-white backdrop-blur-sm rounded-lg p-4 border border-green-200 shadow-sm">
-                                <h3 className="text-green-800 font-semibold text-lg mb-2 uppercase jost">Financial Independence</h3>
+                                <h3 className="text-green-800 font-semibold text-base lg:text-lg uppercase jost">Financial Independence</h3>
                             </div>
                         </div>
 

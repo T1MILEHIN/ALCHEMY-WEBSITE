@@ -11,9 +11,8 @@ const Footer = () => {
                             </div>
                             <span className="text-xl font-bold">Alchemist Path</span>
                         </div>
-                        <p className="text-gray-400 leading-relaxed max-w-md">
-                            Transform your life through the ancient art of alchemy.
-                            Discover your true potential and create the reality you desire.
+                        <p className="text-gray-400 leading-relaxed max-w-md jost">
+                            Step by Step Path for you to go from Finacial Pain to Financial Gain, Which includes personal development and Spiritual awareness
                         </p>
                     </div>
 
