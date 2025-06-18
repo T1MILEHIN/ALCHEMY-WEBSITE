@@ -47,7 +47,7 @@ const navbar = () => {
                                     // className="flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200 font-medium group"
                                 >
                                     {Icon && <Icon size={18} className="group-hover:scale-110 transition-transform duration-200" />}
-                                    <span>{item.label}</span>
+                                    <span className='jost'>{item.label}</span>
                                 </NavLink>
                             ) : (
                                 <a

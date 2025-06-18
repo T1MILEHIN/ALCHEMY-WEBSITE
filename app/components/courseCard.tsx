@@ -1,11 +1,13 @@
 import { ArrowRight, Clock, Star } from 'lucide-react';
 import { Button } from '~/components/ui/button';
+import { Link } from 'react-router';
 
 interface Course {
   id: number;
   title: string;
   subtitle: string;
   description: string;
+  price: string;
   color: string;
   level: string;
 }
@@ -15,9 +17,9 @@ interface CourseCardProps {
 }
 
 export const CourseCard = ({ course }: CourseCardProps) => {
+  const isFree = course.price.toLowerCase() === 'free';
   return (
-    <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105">
-      {/* Gradient Header */}
+    <div className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden hover:scale-105">
       <div className={`h-32 bg-gradient-to-r ${course.color} relative `}>
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute top-4 right-4">
@@ -28,29 +30,32 @@ export const CourseCard = ({ course }: CourseCardProps) => {
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-4 pt-10">
         <h3 className="text-xl font-bold text-gray-800 mb-1">
           {course.title}
         </h3>
-        <h4 className="text-lg font-semibold text-emerald-600 mb-3">
+        <h4 className="inter text-base font-semibold text-emerald-600 mb-3">
           {course.subtitle}
         </h4>
-        <p className="text-gray-600 mb-4 leading-relaxed line-clamp-2">
+        <p className="jost text-gray-600 mb-4 leading-relaxed line-clamp-2">
           {course.description}
         </p>
-        
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center text-gray-500">
-            <Clock size={16} className="mr-1" />
-            <span className="text-sm">6-8 weeks</span>
-          </div>
-          <span className="text-2xl font-bold text-emerald-600">Free</span>
-        </div>
 
-        <Button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium group">
-          Start Journey
-          <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-        </Button>
+        <Link to="/levels">
+          <Button
+            className={`w-full cursor-pointer ${
+              isFree
+                ? 'bg-gradient-to-r from-orange-400 to-red-500 hover:from-orange-500 hover:to-red-600'
+                : 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600'
+            } text-white font-medium group`}
+          >
+            {isFree ? 'Start for Free' : `Start Journey – ${course.price}`}
+            <ArrowRight
+              size={18}
+              className="ml-2 group-hover:translate-x-1 transition-transform duration-200"
+            />
+          </Button>
+        </Link>
       </div>
     </div>
   );

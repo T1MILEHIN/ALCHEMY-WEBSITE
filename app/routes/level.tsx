@@ -1,4 +1,4 @@
-import type { Route } from "./+types/about";
+import type { Route } from "./+types/level";
 import { CheckCircle, Circle, Target } from 'lucide-react';
 import { Button } from '~/components/ui/button';
 import StaircaseStep from "./components/stareCaseSteps";
@@ -7,29 +7,13 @@ import ModulesSection from "./components/modulesSection";
 
 export function meta({ }: Route.MetaArgs) {
     return [
-        { title: "About Page" },
-        { name: "description", content: "About Our Website" },
+        { title: "What Level of alchemy are Your At?" },
+        { name: "description", content: "Check your LEVEL!!!!" },
     ];
 }
 
 
-const about = () => {
-    // const learningPath = [
-    //     { id: 1, title: "Intro", completed: true, current: false },
-    //     { id: 2, title: "Level 1", completed: true, current: false },
-    //     { id: 3, title: "Level 2", completed: true, current: false },
-    //     { id: 4, title: "Level 3", completed: false, current: true },
-    //     { id: 5, title: "Level 4", completed: false, current: false },
-    //     { id: 6, title: "Level 5", completed: false, current: false },
-    //     { id: 7, title: "Goal", completed: false, current: false },
-    // ];
-    // const modules = [
-    //     "Spiritual Foundation",
-    //     "Personal Assessment",
-    //     "Skill Development",
-    //     "Advanced Techniques",
-    //     "Mastery Integration"
-    // ];
+const level = () => {
     const alchemicalPath = [
         { id: 1, title: "TIN", material: "Base Foundation", completed: true, current: false },
         { id: 2, title: "LEAD", material: "Initial Transformation", completed: true, current: false },
@@ -57,18 +41,18 @@ const about = () => {
             <main className="container mx-auto px-4 py-12">
                 {/* Page Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent">
+                    <h1 className="text-6xl font-bold mb-6">
                         WHERE ARE YOU?
                     </h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="jost text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Track your progress on the Alchemist Path and discover your current position in the journey of transformation from base metals to gold.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="gri lg:grid-cols-3 gap-8 space-y-6">
                     <div className="lg:col-span-2">
                         <div className="overflow-hidden bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 min-h-[600px]">
-                            <h2 className="text-2xl font-bold mb-8 text-gray-800 text-center">
+                            <h2 className="inter text-2xl font-bold mb-8 text-gray-800 text-center">
                                 Your Alchemical Journey
                             </h2>
 
@@ -112,7 +96,7 @@ const about = () => {
 
                 {/* Footer Note */}
                 <div className="text-center mt-16 text-gray-500">
-                    <p className="italic">
+                    <p className="jost">
                         "The path of transformation requires patience, dedication, and wisdom. Each step brings you closer to your golden potential."
                     </p>
                 </div>
@@ -121,4 +105,4 @@ const about = () => {
     );
 }
 
-export default about
+export default level

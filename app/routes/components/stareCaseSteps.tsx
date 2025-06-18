@@ -22,7 +22,7 @@ const StaircaseStep = ({ step, index, totalSteps }: StaircaseStepProps) => {
             className={`flex-row-reverse relative flex items-center transition-all duration-500 hover:scale-105`}
             style={{
                 marginBottom: '1rem',
-                marginRight: `${index * 2}rem`
+                marginRight: `${index * 9}rem`
             }}>
             {/* Step Box */}
             <div className={`relative px-6 py-4 rounded-xl shadow-lg transform transition-all duration-300 ${step.completed
@@ -52,7 +52,7 @@ const StaircaseStep = ({ step, index, totalSteps }: StaircaseStepProps) => {
                     <div>
                         <h3 className="font-bold text-sm">{step.title}</h3>
                         {step.material && (
-                            <p className="text-xs opacity-80">{step.material}</p>
+                            <p className="text-xs opacity-80 jost">{step.material}</p>
                         )}
                     </div>
                 </div>
@@ -60,19 +60,10 @@ const StaircaseStep = ({ step, index, totalSteps }: StaircaseStepProps) => {
                 {/* Current Position Indicator */}
                 {step.current && (
                     <div className="z-[999] absolute -bottom-5 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-red-600 text-white text-xs px-1 py-2 rounded-md font-medium">
+                        <div className="jost text-center w-36 bg-red-600 text-white text-xs px-1 py-2 rounded-md font-medium">
                             YOU ARE HERE
                         </div>
                     </div>
-                )}
-
-                {/* Connecting Line to Next Step */}
-                {index < totalSteps && (
-                    <div style={{width: index * 50}} className={` absolute h-0.5 ${step.completed ? 'bg-emerald-400' : 'bg-gray-300'}
-
-                    left-full ml-2
-                    top-1/2 transform -translate-y-1/2
-                    `} />
                 )}
             </div>
         </div>

@@ -22,7 +22,7 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
   },
 ];
 
@@ -43,7 +43,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
     </html>
   );
 }
-
 export default function App() {
   const navigation = useNavigation();
   const isNavigating = Boolean(navigation.location);
@@ -53,7 +52,6 @@ export default function App() {
     </>
   )
 }
-
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
